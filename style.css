@@ -99,3 +99,13 @@ footer {
     font-size: 0.9rem;
     color: #333;
 }
+
+.titulo-destaque {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #b3005e; /* rosa forte, luxuoso */
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+
+}    
