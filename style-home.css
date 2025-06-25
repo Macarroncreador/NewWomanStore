@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff0f6; /* Rosa claro */
+  color: #5a3e64; /* Lilás escuro refinado */
+}
+
+header {
+  background: linear-gradient(to right, #f9d3ec, #e9c4f2); /* Degradê rosa-lilás */
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #e0aaff;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #b86ebf; /* Roxo claro */
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #6d4c91;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #c98aff;
+}
+
+section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #9b51e0;
+  margin-bottom: 1rem;
+  border-left: 5px solid #f9a8d4;
+  padding-left: 0.5rem;
+}
+
+section p,
+section li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a2c5b;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+footer {
+  background-color: #fce4ec;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #e0aaff;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 10px #e0aaff;
+}
