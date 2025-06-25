@@ -1,135 +1,140 @@
-from pathlib import Path
-
-style_css = """
-/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #F5E2C8; /* Bege/Nude claro */
-    color: #1C1C1C; /* Preto profundo */
-    line-height: 1.6;
+  font-family: 'Lora', serif;
+  background-color: #f5e2c8;
+  color: #2c1b10;
+  line-height: 1.6;
+  padding-bottom: 50px;
 }
 
-/* Cabeçalho */
 header {
-    background: linear-gradient(to right, #D4AF37, #FFD700); /* Dourado */
-    color: #0A0A0A;
-    padding: 20px 0;
-    text-align: center;
+  background: linear-gradient(to right, #6d4c41, #a1887f);
+  color: #fefefe;
+  padding: 20px 0;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: #0A0A0A;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  list-style: none;
+  margin-top: 10px;
 }
 
 nav ul li {
-    margin: 0 15px;
+  display: inline-block;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: #0A0A0A;
-    text-decoration: none;
-    font-weight: bold;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-/* Banner */
 #banner {
-    text-align: center;
-    margin: 40px 0;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 90%;
 }
 
 #banner img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #banner h2 {
-    margin-top: 15px;
-    font-size: 1.8em;
-    color: #5A2D1C; /* Marrom quente */
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #5c3b1f;
+  margin-top: 20px;
 }
 
-/* Destaques */
 #destaques {
-    padding: 30px 10%;
-    background-color: #E8D8C0; /* Tom bege suave */
+  padding: 40px 20px;
+  text-align: center;
 }
 
 #destaques h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #6E1414; /* Vinho avermelhado */
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #3b2210;
 }
 
 .card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: inline-block;
-    width: 250px;
+  display: inline-block;
+  background-color: #fffaf5;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .card h4 {
-    margin-top: 10px;
-    color: #3B1F13; /* Marrom quente */
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin: 15px 0 10px;
+  color: #3b2210;
 }
 
-.card .preco {
-    color: #8B0000; /* Vinho mais forte */
-    font-weight: bold;
-    margin: 10px 0;
+.preco {
+  font-size: 1.2rem;
+  color: #8e2a2a;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 button {
-    background-color: #D4AF37;
-    color: #0A0A0A;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #c49a6c;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #FFD700;
+  background-color: #a57b52;
 }
 
-/* Rodapé */
 footer {
-    background-color: #1C1C1C;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+  background-color: #6d4c41;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+  font-family: 'Lora', serif;
 }
-"""
-
-output_path = Path("/mnt/data/style.css")
-output_path.write_text(style_css)
-
-output_path.name
 
