@@ -92,18 +92,22 @@ img {
     box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
 }
 #sobre-nos {
-    text-align: center;
-    padding: 4rem 2rem;
-    background-image: url('estrelas-brilho.png'); /* substitua pelo nome real do arquivo */
-    background-repeat: repeat;
-    background-size: contain;
-    opacity: 0.9;
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem;
+  z-index: 1;
 }
 
-#sobre-nos p {
-    max-width: 800px;
-    margin: 1.5rem auto;
-    font-size: 1.1rem;
+#sobre-nos::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('estrelas-brilho.png');
+  background-repeat: repeat;
+  background-size: contain;
+  opacity: 0.3;
+  z-index: -1;
+
 }
 
 #missao-visao-valores {
